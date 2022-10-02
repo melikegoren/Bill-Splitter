@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".BillFragment">
+
+    <data>
+        <variable
+            name="billFragment"
+            type="com.example.billsplitter.BillFragment" />
+    </data>
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/totalAmount"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_sides"
+        android:layout_marginTop="@dimen/margin_sides"
+        android:layout_marginEnd="@dimen/margin_sides"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:startIconDrawable="@drawable/ic_baseline_attach_money_24"
+        app:endIconMode="clear_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTxtTotalAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Total Amount"
+            android:inputType="numberDecimal"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/totalNumberOfPeople"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_sides"
+        android:layout_marginEnd="@dimen/margin_sides"
+        android:layout_marginTop="@dimen/margin_sides"
+        app:startIconDrawable="@drawable/ic_baseline_person_24"
+        app:layout_constraintTop_toBottomOf="@+id/totalAmount"
+        tools:layout_editor_absoluteX="1dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTxtTotalNumOfPeop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Total Number of People"
+            android:inputType="numberDecimal"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tipAmount"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_sides"
+        android:layout_marginEnd="@dimen/margin_sides"
+        android:layout_marginStart="@dimen/margin_sides"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="322dp"
+        app:startIconDrawable="@drawable/ic_baseline_percent_24"
+        app:layout_constraintTop_toBottomOf="@id/totalNumberOfPeople"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTxtTipAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tip Amount"
+            android:inputType="numberDecimal"
+            app:layout_constraintTop_toBottomOf="@id/totalNumberOfPeople"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            >
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_button_sides"
+        android:layout_marginTop="@dimen/margin_sides"
+        android:layout_marginEnd="@dimen/margin_button_sides"
+        android:backgroundTint="@color/black"
+        android:enabled="false"
+        android:onClick="@{() -> billFragment.onCreateDialog()}"
+        android:text="Calculate"
+        app:backgroundTint="#989494"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipAmount" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="304dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="@dimen/margin_img_sides"
+        android:layout_marginTop="@dimen/margin_img_top"
+        android:layout_marginEnd="@dimen/margin_img_sides"
+        android:src="@drawable/moneyicon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

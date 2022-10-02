@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Bill Splitter</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <dimen name="margin_sides">32dp</dimen>
+    <dimen name="margin_button_sides">159dp</dimen>
+    <dimen name="margin_img_top">16dp</dimen>
+    <dimen name="margin_img_sides">54dp</dimen>
+</resources>
