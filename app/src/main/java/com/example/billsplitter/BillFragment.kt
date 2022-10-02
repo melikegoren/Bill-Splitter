@@ -106,18 +106,10 @@ class BillFragment : Fragment(R.layout.fragment_bill) {
 
     }
 
-
-
-
-
-
-
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
     }
-
-
 
 }
 
@@ -125,11 +117,3 @@ class BillFragment : Fragment(R.layout.fragment_bill) {
 
 
 
-
-
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//
-//
-//
-//    }
